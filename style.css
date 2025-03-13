@@ -1,0 +1,33 @@
+.btn {
+    background-color: chartreuse;
+    border: 0.1em;
+    color: aliceblue;
+    text-align: center;
+    font-size: large;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: darkblue;
+    color: azure;
+}
+
+.btn-green {
+    background-color: lightslategray;
+    color: chartreuse;
+    background-blend-mode: color-burn;
+}
+
+.btn-nav {
+    background-color: cadetblue;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn-nav-home {
+    background-color: darkgrey;
+    color: black;
+    border-radius: 5px;
+}

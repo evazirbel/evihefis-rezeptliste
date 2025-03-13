@@ -8,35 +8,14 @@
         content="recipes for baking bread, pizza and cakes">
     <link rel="icon" type="image/jpg" href="./assets/img/cake.jpg">
     <title>Evihefi Home</title>
-
-    <style>
-        .button {
-            background-color: chartreuse;
-            border: 0.1em;
-            color: aliceblue;
-            text-align: center;
-            font-size: large;
-            transition-duration: 0.4s;
-            cursor: pointer;
-        }
-
-        .button1 {
-            background-color: aliceblue;
-            color: blue;
-        }
-
-        .button1:hover {
-            background-color: darkblue;
-            color: azure;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Evihefis Lieblingsrezeptis</h1>
     <hr>
 
-    <button class="button button1">I bims 1 Knopf</button>
+    <button class="btn">I bims 1 Knopf</button>
 
 
     <img src="./assets/img/bake.jpg" width="250px">
@@ -50,9 +29,7 @@
 
     </a>
     <br><br><br><br><br>
-    <button onclick="nervmich()" style="background-color: lightslategray; 
-                    color: chartreuse; 
-                    background-blend-mode: color-burn;">Nö, ich bin der einzig wahre Knopf</button>
+    <button class="btn-green" onclick="nervmich()" >Nö, ich bin der einzig wahre Knopf</button>
     <script>
         function nervmich() {
             document.getElementById("test").innerHTML = "Hallouuhh, kommst du etwa nicht weiter? Dann probier's mal mit Zauberei";
