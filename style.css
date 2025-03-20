@@ -1,5 +1,5 @@
 .btn {
-    background-color: chartreuse;
+    background-color: rgb(81, 117, 44);
     border: 0.1em;
     color: aliceblue;
     text-align: center;
@@ -24,6 +24,11 @@
     background-color: cadetblue;
     color: black;
     border-radius: 5px;
+}
+
+.btn-nav:hover {
+    background-color: azure;
+    color: rgb(13, 46, 47);
 }
 
 .btn-nav-home {

@@ -2,34 +2,37 @@
 <html lang="de-CH">
 
 <head>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" name="description"
         content="recipes for baking bread, pizza and cakes">
-    <link rel="icon" type="image/jpg" href="./assets/img/cake.jpg">
     <title>Evihefi Home</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
     <h1>Evihefis Lieblingsrezeptis</h1>
     <hr>
+    <img src="./assets/img/bake.jpg" width="250px" alt="Evihefi wirft Pizzateig in die Luft" style="float:right">
+    <h3>Hallo!</h3>
+    <p>Das bin ich: <b>Evihefi</b><br>
+        Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.<br>
+        Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten, <br>
+        nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt).</p> <br>
 
-    <button class="btn">I bims 1 Knopf</button>
+    <h5>Ein bisschen Spass muss sein!</h5>
+    <button>I bims 1 Knopf</button>
 
 
-    <img src="./assets/img/bake.jpg" width="250px">
-    <h5>Ein bisschen Spass muss sein! <br>
-    </h5>
+    <br>
 
 
-    <a>
-        <button>Ich auch!</button>
+    <button>Ich auch!</button>
+
     </a>
-
-    </a>
-    <br><br><br><br><br>
-    <button class="btn-green" onclick="nervmich()" >Nö, ich bin der einzig wahre Knopf</button>
+    <br>
+    <button class="btn-green" onclick="nervmich()">Nö, ich bin der einzig wahre Knopf</button>
     <script>
         function nervmich() {
             document.getElementById("test").innerHTML = "Hallouuhh, kommst du etwa nicht weiter? Dann probier's mal mit Zauberei";
@@ -38,20 +41,22 @@
     </script>
     <p id="test">
     </p>
-    <br><br><br><br><br>
+    <br>
     <a href="bread.html">
-        <button>Zaubere mich zum Brot</button>
+        <button class="btn">Zaubere mich zum Brot</button>
     </a><br>
     <a href="pizza.html">
-        <button>Zaubere mich zur Pizza</button>
+        <button class="btn">Zaubere mich zur Pizza</button>
     </a><br>
 
     <a href="cakes.html">
-        <button>Zaubere mich zum Kuchen</button>
+        <button class="btn">Zaubere mich zum Kuchen</button>
     </a><br>
-    <p>Oder werde Teil der Lachs-Comunity!</p>
-    <a href="members.html">
-        <button>Mitglied werden</button>
+    <p>Oder werde Teil der
+        <a href="members.html">
+            <button class="btn-nav">Lachs-Community!</button>
+        </a>
+    </p>
 
 </body>
 
