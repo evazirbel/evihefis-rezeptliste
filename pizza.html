@@ -8,58 +8,30 @@
     <title>Pizza</title>
 
     <style>
-    body {
-    background-image: url('./assets/img/pizza.jpg'); /* Dein Hintergrundbild */
-    background-size: cover;
-    position: relative;
-    color:aliceblue;
-}
-h2{
-color:rgb(66, 110, 111);
-font-family:'Courier New', Courier, monospace
-}
-.overlay {
-    position: fixed; /* Overlay bleibt immer im Hintergrund */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Schwarz mit 50% Transparenz */
-    z-index: 1; /* Overlay über dem Hintergrundbild */
-}
+        body {
+            background-image: url('./assets/img/pizza.jpg');
+            /* Dein Hintergrundbild */
+            background-size: cover;
+            color: aliceblue;
+        }
 
-.container {
-    position: relative;
-    z-index: 2; /* Container über dem Overlay */
-    background-color: white; /* Hintergrundfarbe für den Rechner */
-    padding: 20px;
-    border-radius: 10px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
-    max-width: 400px; /* Maximale Breite des Rechners */
-    margin: 50px auto; /* Zentriert den Rechner */
-}
+        .container {
+            float: left;
+            margin-left: 10px;
+        }
+        
     </style>
 
 </head>
 
 <body>
+    <button type="button" class="btn-nav-home" onclick="location.href='index.html'">Zurück zur Startseite</button>
 
+    <button type="button" class="btn-nav" onclick="location.href='bread.html'">Brot</button>
 
+    <button type="button" class="btn-nav" onclick="location.href='pizza.html'">Pizza</button>
 
-    <a href="index.html">
-        <button class="btn-nav-home">Zurück zur Startseite</button>
-    </a>
-
-    <a href="bread.html">
-        <button class="btn-nav">Brot</button>
-    </a>
-
-    <a href="pizza.html">
-        <button class="btn-nav">Pizza</button>
-    </a>
-
-    <a href="cakes.html">
-        <button class="btn-nav">Kuchen</button></a>
+    <button type="button" class="btn-nav" onclick="location.href='cakes.html'">Kuchen</button>
 
 
     <h2>Das braucht es für einen Pizzateig</h2>
@@ -68,29 +40,30 @@ font-family:'Courier New', Courier, monospace
         <li>Wasser</li>
         <li>Mehl</li>
         <li>Hefe</li>
-        <li>Salz </li><br>
+        <li>Salz </li>
     </ul>
     <pre>Mehr brauchst du nicht.
         Aber warum wird die eigene Pizza nie so gut wie die vom Italiener?
                 Vielleicht klappt es ja besser, wenn du mein Rezept ausprobierst...
     </pre>
-    <h2>Du möchtest eine individuelle Teigmenge berechnen?</h2>
+    <div class="container"> <!-- Container für den Rechner -->
+        <h3>Du möchtest eine individuelle Teigmenge berechnen?</h3>
 
-    <label for="rezept">Wähle ein Rezept:</label>
-    <select id="rezept" onchange="updateIngredients()">
-        <option value="american_style">American Style</option>
-        <option value="ny_style">New York Style</option>
-    </select>
+        <label for="rezept">Wähle ein Rezept:</label>
+        <select id="rezept" onchange="updateIngredients()">
+            <option value="american_style">American Style</option>
+            <option value="ny_style">New York Style</option>
+        </select>
 
-    <label for="anzahl">Anzahl der Pizzen:</label>
-    <input type="number" id="anzahl" value="1" min="1" onchange="updateIngredients()">
-    <button onclick="berechneZutaten()">Berechnen</button>
+        <label for="anzahl">Anzahl der Pizzen:</label>
+        <input type="number" id="anzahl" value="1" min="1" onchange="updateIngredients()">
+        <button type="button" onclick="berechneZutaten()">Berechnen</button>
 
-    <h2>Zutaten:</h2>
-    <p id="zutaten"></p>
+        <h2>Zutaten:</h2>
+        <p id="zutaten"></p>
 
-    <script src="recipe_calculator.js"></script>
-
+        <script src="recipe_calculator.js"></script>
+    </div>
 </body>
 
 </html>

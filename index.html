@@ -4,60 +4,73 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" name="description"
-        content="recipes for baking bread, pizza and cakes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evihefi Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+            float: right;
+            margin-left: 20px;
+        }
 
+        .button-container {
+            margin-top: 20px;
+            /* Add some space above the buttons */
+        }
+
+        .href-start {
+            display: block;
+            /* Make each link a block element for better spacing */
+            margin: 10px 0;
+            /* Add vertical spacing between links */
+        }
+    </style>
 
 </head>
 
 <body>
     <h1>Evihefis Lieblingsrezeptis</h1>
     <hr>
-    <p><img src="./assets/img/bake.jpg" width="250px" alt="Evihefi wirft Pizzateig in die Luft" style="float:right">
+    <img src="./assets/img/bake.jpg" usemap="#workmap" width="250" alt="Evihefi wirft Pizzateig in die Luft"
+        style="display: flex;">
+    <map name="workmap">
+        <area shape="rect" coords="74, 75, 334, 344" href="./assets/img/bake.jpg" alt="Bake Image"
+            onclick="myFunction()">
+    </map>
+    <script>
+        function myFunction() {
+            alert("He! Du hast mich angeklickt!");
+        }
+    </script>
+
     <h3>Hallo!</h3>
-   Das bin ich: <b>Evihefi</b><br>
-        Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.<br>
-        Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten, <br>
-        nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt).</p> <br>
+    Das bin ich: <b>Evihefi</b><br>
+    Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.<br>
+    Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten, <br>
+    nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt). <br>
 
-    <h5>Ein bisschen Spass muss sein!</h5>
-    <button>I bims 1 Knopf</button>
-
-
-    <br>
-
-
-    <button>Ich auch!</button>
-
-    </a>
-    <br>
-    <button class="btn-green" onclick="nervmich()">Nö, ich bin der einzig wahre Knopf</button>
+    <button type="button" class="btn-green" onclick="nervmich()">Ich bin ein ziemlich cooler Knopf</button>
     <script>
         function nervmich() {
-            document.getElementById("test").innerHTML = "Hallouuhh, kommst du etwa nicht weiter? Dann probier's mal mit Zauberei";
+            document.getElementById("test").innerHTML = "Hallouuhh, kommst du etwa nicht weiter? Dann probier's mal mit einem der Zauberknöpfe";
         }
 
     </script>
-    <p id="test">
-    </p>
-    <br>
-    <p><a href="bread.html" class="href-start">
-            Zaubere mich zum Brot
-        </a></p>
-    <p><a href="pizza.html" class="href-start">
-            Zaubere mich zur Pizza
-        </a></p>
+    <div id="test-container">
+        <p id="test"></p>
+    </div>
 
-    <p><a href="cakes.html" class="href-start">
-            Zaubere mich zum Kuchen
-        </a></p>
-    <p style="float: inline-end;">Oder werde Teil der
-        <a href="members.html">
-            <button class="btn-nav">Lachs-Community!</button>
-        </a>
-    </p>
+    <section class="button-container">
+        <h3>Wähle eine Option:</h3>
+        <p class="href-start" onclick="location.href='bread.html'">Zaubere mich zum Brot</p>
+        <p class="href-start" onclick="location.href='pizza.html'">Zaubere mich zur Pizza</p>
+        <p class="href-start" onclick="location.href='cakes.html'">Zaubere mich zum Kuchen</p>
+    </section>
+
+    <section class="community-container">
+        <p>Oder werde Teil der</p>
+        <button type="button" class="btn-nav" onclick="location.href='members.html'">Lachs-Community!</button>
+    </section>
 
 </body>
 
