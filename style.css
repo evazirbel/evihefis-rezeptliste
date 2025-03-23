@@ -1,8 +1,50 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: cadetblue;
+}
+
+h1 {
+    background-color: azure;
+    color:  rgb(51, 83, 83);
+}
+
+h2 {
+    color: rgb(51, 83, 83);
+    font-family: 'Courier New', Courier, monospace
+}
+
+h3 {
+    color: rgb(51, 83, 83);
+    font-family: 'Courier New', Courier, monospace
+}
+
+.message-box {
+    border: 2px solid #4CAF50; /* Rahmenfarbe und -dicke */
+    padding: 10px; /* Innenabstand */
+    margin-top: 10px; /* Abstand nach oben */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #f9f9f9; /* Hintergrundfarbe */
+    display: inline-block; /* Damit der Rahmen nur um den Text ist */
+}
+
+.container {
+    z-index: 1;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: auto;
+}
+
 .btn {
     background-color: rgb(81, 117, 44);
     border: 0.1em;
     color: aliceblue;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
     font-size: large;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -17,6 +59,14 @@
     background-color: rgb(171, 185, 185);
     color: rgb(81, 117, 44);
     background-blend-mode: color-burn;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    box-shadow: #000;
+}
+
+.btn-green:hover {
+background-color: rgb(81, 117, 44);
+color: rgb(171, 185, 185);
 }
 
 .btn-nav {
@@ -44,7 +94,6 @@
     padding: 2px;
     text-decoration: none white;
     margin: 20px;
-
 }
 
 .href-start:hover {

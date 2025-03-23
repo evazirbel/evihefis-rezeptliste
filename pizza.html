@@ -46,8 +46,8 @@
         Aber warum wird die eigene Pizza nie so gut wie die vom Italiener?
                 Vielleicht klappt es ja besser, wenn du mein Rezept ausprobierst...
     </pre>
-    <div class="container"> <!-- Container für den Rechner -->
-        <h3>Du möchtest eine individuelle Teigmenge berechnen?</h3>
+    <div class="container">
+        <h2>Du möchtest eine individuelle Teigmenge berechnen?</h2>
 
         <label for="rezept">Wähle ein Rezept:</label>
         <select id="rezept" onchange="updateIngredients()">
@@ -59,10 +59,10 @@
         <input type="number" id="anzahl" value="1" min="1" onchange="updateIngredients()">
         <button type="button" onclick="berechneZutaten()">Berechnen</button>
 
-        <h2>Zutaten:</h2>
+        <h3>Zutaten:</h3>
         <p id="zutaten"></p>
 
-        <script src="recipe_calculator.js"></script>
+        <script src="script.js/recipe_calculator.js"></script>
     </div>
 </body>
 

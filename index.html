@@ -15,27 +15,24 @@
 
         .button-container {
             margin-top: 20px;
-            /* Add some space above the buttons */
         }
 
         .href-start {
             display: block;
-            /* Make each link a block element for better spacing */
             margin: 10px 0;
-            /* Add vertical spacing between links */
         }
     </style>
 
 </head>
 
 <body>
-    <h1>Evihefis Lieblingsrezeptis</h1>
+    <h1>Evihefis Lieblingsrezepte</h1>
     <hr>
     <img src="./assets/img/bake.jpg" usemap="#workmap" width="250" alt="Evihefi wirft Pizzateig in die Luft"
         style="display: flex;">
     <map name="workmap">
-        <area shape="rect" coords="74, 75, 334, 344" href="./assets/img/bake.jpg" alt="Bake Image"
-            onclick="myFunction()">
+        <area shape="rect" coords="74, 75, 334, 344" href="./assets/img/bake.jpg"
+            alt="Evihefi wirft Pizzateig in die Luft" onclick="myFunction()">
     </map>
     <script>
         function myFunction() {
@@ -44,20 +41,23 @@
     </script>
 
     <h3>Hallo!</h3>
-    Das bin ich: <b>Evihefi</b><br>
-    Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.<br>
-    Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten, <br>
-    nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt). <br>
+    <pre>
+    Das bin ich: <b>Evihefi</b>
+    Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.
+    Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten,
+    nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt).
+    </pre>
 
-    <button type="button" class="btn-green" onclick="nervmich()">Ich bin ein ziemlich cooler Knopf</button>
+    <button type="button" class="btn-green" onclick="nervmich()">Was ist das hier für eine Seite?</button>
+    <p id="test" class="message-box" style="display: none;"></p>
     <script>
         function nervmich() {
-            document.getElementById("test").innerHTML = "Hallouuhh, kommst du etwa nicht weiter? Dann probier's mal mit einem der Zauberknöpfe";
+            document.getElementById("test").innerHTML = "Diese Seite ist entstanden, weil ich in meiner Freizeit versuche, mir ein wenig HTML beizubringen.";
+            document.getElementById("test").style.display = "inline-block";
         }
-
     </script>
     <div id="test-container">
-        <p id="test"></p>
+
     </div>
 
     <section class="button-container">
@@ -68,7 +68,7 @@
     </section>
 
     <section class="community-container">
-        <p>Oder werde Teil der</p>
+        <p>Du möchtest immer auf aktuellem Stand sein?</p>
         <button type="button" class="btn-nav" onclick="location.href='members.html'">Lachs-Community!</button>
     </section>
 
