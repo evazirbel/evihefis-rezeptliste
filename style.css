@@ -1,6 +1,9 @@
+
 body {
     font-family: 'Courier New', Courier, monospace;
     color: cadetblue;
+    margin: 0; /* Entferne Standard-Margen */
+    padding: 20px; /* Füge etwas Padding hinzu */
 }
 
 h1 {
@@ -10,12 +13,14 @@ h1 {
 
 h2 {
     color: rgb(51, 83, 83);
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h3 {
     color: rgb(51, 83, 83);
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    position:static;
 }
 
 .message-box {
@@ -65,8 +70,8 @@ h3 {
 }
 
 .btn-green:hover {
-background-color: rgb(81, 117, 44);
-color: rgb(171, 185, 185);
+    background-color: rgb(81, 117, 44);
+    color: rgb(171, 185, 185);
 }
 
 .btn-nav {
@@ -86,6 +91,10 @@ color: rgb(171, 185, 185);
     border-radius: 5px;
 }
 
+.button-container {
+    margin-top: 20px;
+}
+
 .href-start {
     background-color: lightslategray;
     color: #FFFFFF;
@@ -103,4 +112,55 @@ color: rgb(171, 185, 185);
     padding: 30px;
     transition-duration: 0.4s;
     text-decoration: none;
+}
+
+.href-start {
+    display: block;
+    margin: 10px 0;
+}
+
+.all-boxes {
+    margin: 3px;
+    padding: 5px;
+    background-color: rgb(148, 182, 159);
+}
+
+.all-boxes > h1, .box {
+    margin: 10px;
+    padding: 5px;
+}
+
+.box {
+    background: white;
+    padding: 10px; /* Optional: Innenabstand für den Text */
+}
+
+.box > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+
+.content-container {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    align-items: flex-start; /* Elemente am oberen Rand ausrichten */
+    width: 100%; /* Volle Breite */
+}
+
+.text-container {
+    flex: 1; /* Textcontainer nimmt den verfügbaren Platz ein */
+    max-width: 50%; /* Maximal 50% der Breite */
+    padding-right: 20px; /* Abstand zwischen Text und Bild */
+}
+
+.image-container {
+    flex: 0 0 auto; /* Bildcontainer hat eine feste Breite */
+    background-color: #f0f0f0; /* Hintergrundfarbe */
+    border: 2px solid #ccc; /* Rahmen */
+    padding: 10px; /* Innenabstand */
+}
+
+.all-boxes img {
+    max-width: 100%; /* Bild responsive machen */
+    height: auto; /* Höhe automatisch anpassen */
 }
