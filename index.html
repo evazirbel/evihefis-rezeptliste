@@ -2,51 +2,43 @@
 <html lang="de-CH">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="recipes, pizza, bread, cake">
     <title>Evihefi Home</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        img {
-            float: right;
-            margin-left: 20px;
-        }
-
-        .button-container {
-            margin-top: 20px;
-        }
-
-        .href-start {
-            display: block;
-            margin: 10px 0;
-        }
-    </style>
-
 </head>
 
 <body>
     <h1>Evihefis Lieblingsrezepte</h1>
     <hr>
-    <img src="./assets/img/bake.jpg" usemap="#workmap" width="250" alt="Evihefi wirft Pizzateig in die Luft"
-        style="display: flex;">
-    <map name="workmap">
-        <area shape="rect" coords="74, 75, 334, 344" href="./assets/img/bake.jpg"
-            alt="Evihefi wirft Pizzateig in die Luft" onclick="myFunction()">
-    </map>
-    <script>
-        function myFunction() {
-            alert("He! Du hast mich angeklickt!");
-        }
-    </script>
-
-    <h3>Hallo!</h3>
-    <pre>
-    Das bin ich: <b>Evihefi</b>
-    Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.
-    Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten,
-    nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt).
-    </pre>
+    <section class="all-boxes">
+        <div class="content-container">
+            <div class="text-container">
+                <h3>Hallo!</h3>
+                <section class="box">
+                    <p>
+                    Das bin ich: <b>Evihefi</b>
+                    Ich habe grosse Freude am Backen - vor allem ohne Rezept auf gut Glück.
+                    Weil dabei nicht immer alles gut geht, hat mir mein Lieblingsmensch dazu geraten,
+                    nun doch mal das eine oder andere Rezept aufzuschreiben (Auch dann, wenns mal nicht so gut kommt).
+                    </p>
+                </section>
+            </div>
+            <div class="image-container">
+                <img src="./assets/img/bake.jpg" usemap="#workmap" width="250" alt="Evihefi wirft Pizzateig in die Luft">
+                <map name="workmap">
+                    <area shape="rect" coords="74, 75, 334, 344" href="./assets/img/bake.jpg"
+                        alt="Evihefi wirft Pizzateig in die Luft" onclick="myFunction()">
+                </map>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                alert("He! Du hast mich angeklickt!");
+            }
+        </script>
+    </section>
 
     <button type="button" class="btn-green" onclick="nervmich()">Was ist das hier für eine Seite?</button>
     <p id="test" class="message-box" style="display: none;"></p>
@@ -56,22 +48,20 @@
             document.getElementById("test").style.display = "inline-block";
         }
     </script>
-    <div id="test-container">
-
-    </div>
 
     <section class="button-container">
         <h3>Wähle eine Option:</h3>
-        <p class="href-start" onclick="location.href='bread.html'">Zaubere mich zum Brot</p>
-        <p class="href-start" onclick="location.href='pizza.html'">Zaubere mich zur Pizza</p>
-        <p class="href-start" onclick="location.href='cakes.html'">Zaubere mich zum Kuchen</p>
-    </section>
+        <nav>
+            <p class="href-start" onclick="location.href='bread.html'">Zaubere mich zum Brot</p>
+            <p class="href-start" onclick="location.href='pizza.html'">Zaubere mich zur Pizza</p>
+            <p class="href-start" onclick="location.href='cakes.html'">Zaubere mich zum Kuchen</p>
+        </nav>
+    </section><br>
 
     <section class="community-container">
         <p>Du möchtest immer auf aktuellem Stand sein?</p>
-        <button type="button" class="btn-nav" onclick="location.href='members.html'">Lachs-Community!</button>
+        <button type="button" class="btn-nav" onclick="location.href='members.html'">Aktuelles</button>
     </section>
-
 </body>
 
 </html>
